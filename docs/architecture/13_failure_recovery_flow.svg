@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="80" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="30" y="48" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">AuraTrust Fault Tolerance & Failure Recovery Architecture</text>
+    <text x="30" y="68" font-family="Segoe UI, sans-serif" font-size="13" fill="#38BDF8">Deterministic Recovery Paths for Biometric, Network, and Database Failure Modes</text>
+  </g>
+  
+        <g transform="translate(60, 160)">
+          <rect width="1480" height="760" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+          <g transform="translate(40, 40)">
+            <rect x="0" y="0" width="700" height="150" rx="12" fill="#1E293B" stroke="#38BDF8"/>
+            <text x="20" y="35" font-family="Segoe UI" font-size="15" font-weight="700" fill="#38BDF8">1. NO FACE IN FRAME</text>
+            <text x="20" y="70" font-family="Segoe UI" font-size="13" fill="#E2E8F0">Behavior: Drop frame silently; keep webcam capture loop running at 30 FPS.</text>
+            <text x="20" y="105" font-family="Segoe UI" font-size="13" fill="#94A3B8">Recovery: No state mutation; zero server GPU burden.</text>
+
+            <rect x="740" y="0" width="700" height="150" rx="12" fill="#1E293B" stroke="#EF4444"/>
+            <text x="760" y="35" font-family="Segoe UI" font-size="15" font-weight="700" fill="#EF4444">2. PRESENTATION SPOOF ATTACK</text>
+            <text x="760" y="70" font-family="Segoe UI" font-size="13" fill="#E2E8F0">Behavior: Auxiliary PAD score &lt; 0.50 triggers immediate block.</text>
+            <text x="760" y="105" font-family="Segoe UI" font-size="13" fill="#94A3B8">Recovery: Logs incident to anomaly_events with plain-text forensic XAI summary.</text>
+
+            <rect x="0" y="180" width="700" height="150" rx="12" fill="#1E293B" stroke="#F59E0B"/>
+            <text x="20" y="215" font-family="Segoe UI" font-size="15" font-weight="700" fill="#F59E0B">3. BORDERLINE MATCH (0.48 - 0.65)</text>
+            <text x="20" y="250" font-family="Segoe UI" font-size="13" fill="#E2E8F0">Behavior: Enqueues candidate into DualVerificationManager in-memory queue.</text>
+            <text x="20" y="285" font-family="Segoe UI" font-size="13" fill="#94A3B8">Recovery: Faculty views comparison crop side-by-side with registered database photo.</text>
+
+            <rect x="740" y="180" width="700" height="150" rx="12" fill="#1E293B" stroke="#8B5CF6"/>
+            <text x="760" y="215" font-family="Segoe UI" font-size="15" font-weight="700" fill="#818CF8">4. WEBSOCKET NETWORK DROP</text>
+            <text x="760" y="250" font-family="Segoe UI" font-size="13" fill="#E2E8F0">Behavior: wsClient detects onclose event; halts frame transmission.</text>
+            <text x="760" y="285" font-family="Segoe UI" font-size="13" fill="#94A3B8">Recovery: Exponential backoff reconnects automatically (delay = min(1000*1.5^n, 10000)ms).</text>
+
+            <rect x="0" y="360" width="1440" height="150" rx="12" fill="#1E293B" stroke="#10B981"/>
+            <text x="20" y="395" font-family="Segoe UI" font-size="15" font-weight="700" fill="#34D399">5. DATABASE DEADLOCK / CRASH</text>
+            <text x="20" y="430" font-family="Segoe UI" font-size="13" fill="#E2E8F0">Behavior: SQLAlchemy raises OperationalError or IntegrityError during transaction.</text>
+            <text x="20" y="465" font-family="Segoe UI" font-size="13" fill="#94A3B8">Recovery: get_db() context manager triggers db.rollback(); pool_pre_ping validates connection health.</text>
+          </g>
+        </g>
+        
+</svg>

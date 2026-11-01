@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="grad-green4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064E3B" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg4)"/>
+
+  <!-- Title -->
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="80" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow4)"/>
+    <text x="30" y="48" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">AuraTrust Relational Schema & Entity-Relationship Architecture</text>
+    <text x="1140" y="48" font-family="Segoe UI, monospace" font-size="14" fill="#34D399">13 MYSQL TABLES VERIFIED</text>
+    <text x="30" y="68" font-family="Segoe UI, sans-serif" font-size="13" fill="#94A3B8">Two-Phase Staging & Immutable Ledger • Section/Subject Guards • Foreign Keys & Constraints</text>
+  </g>
+
+  <!-- COLUMN 1: IDENTITY & ROSTER -->
+  <g transform="translate(60, 150)">
+    <rect width="340" height="780" rx="16" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="340" height="45" rx="16" fill="#0284C7"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">1. Identity & Roster Entities</text>
+
+    <!-- users table -->
+    <g transform="translate(15, 65)">
+      <rect width="310" height="150" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="310" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">users (Core Auth Account)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• user_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• username: VARCHAR(50) [UQ, IDX]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• email: VARCHAR(100) [UQ, IDX]</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• password_hash: VARCHAR(255)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">• role: ENUM('STUDENT','FACULTY','ADMIN')</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• is_active: BOOL | created_at: DATETIME</text>
+    </g>
+
+    <!-- students table -->
+    <g transform="translate(15, 230)">
+      <rect width="310" height="175" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="310" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">students (Academic Identity)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• student_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• user_id: INT [FK -> users.user_id, UQ]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• registration_no: VARCHAR(30) [UQ]</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• department: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">• section: VARCHAR(20) [5 AIML A / B]</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• batch_year: INT</text>
+      <text x="12" y="154" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">• embedding_path: VARCHAR(255)</text>
+    </g>
+
+    <!-- faculty table -->
+    <g transform="translate(15, 420)">
+      <rect width="310" height="150" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="310" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">faculty (Instructors)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• faculty_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• user_id: INT [FK -> users.user_id, UQ]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• employee_code: VARCHAR(30) [UQ]</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• department: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">• registered_face_path: VARCHAR(255)</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">• embedding_hash: VARCHAR(255)</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: ACADEMIC CURRICULUM -->
+  <g transform="translate(430, 150)">
+    <rect width="350" height="780" rx="16" fill="#0F172A" stroke="#818CF8" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="350" height="45" rx="16" fill="#4338CA"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">2. Courses & Sessions</text>
+
+    <!-- subjects table -->
+    <g transform="translate(15, 65)">
+      <rect width="320" height="130" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="320" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#A5B4FC">subjects (Curriculum)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• subject_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• subject_code: VARCHAR(20) [UQ]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• subject_name: VARCHAR(100)</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• department: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">AIML-501-A / AIML-501-B</text>
+    </g>
+
+    <!-- student_enrollments table -->
+    <g transform="translate(15, 210)">
+      <rect width="320" height="120" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="320" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#A5B4FC">student_enrollments (Section Guard)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• student_id: INT [PK, FK -> students]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• subject_id: INT [PK, FK -> subjects]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• enrolled_at: DATETIME</text>
+      <text x="12" y="102" font-family="Segoe UI, sans-serif" font-size="10" fill="#10B981">Guards against cross-section fraud</text>
+    </g>
+
+    <!-- class_sessions table -->
+    <g transform="translate(15, 345)">
+      <rect width="320" height="180" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="320" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#A5B4FC">class_sessions (Classroom Window)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• session_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• subject_id: INT [FK -> subjects]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• faculty_id: INT [FK -> faculty]</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• room_number: VARCHAR(20)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#F59E0B">• status: ENUM('SCHEDULED','ACTIVE',...)</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• start_time / end_time: DATETIME</text>
+      <text x="12" y="154" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• grace_period_minutes: INT (15m)</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: TWO-PHASE ATTENDANCE LEDGER -->
+  <g transform="translate(810, 150)">
+    <rect width="380" height="780" rx="16" fill="#0F172A" stroke="#10B981" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="380" height="45" rx="16" fill="url(#grad-green4)"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">3. Two-Phase Attendance Lifecycle</text>
+
+    <!-- attendance_staging -->
+    <g transform="translate(15, 65)">
+      <rect width="350" height="160" rx="8" fill="#1E293B" stroke="#38BDF8"/>
+      <rect x="0" y="0" width="350" height="28" rx="8" fill="#0369A1"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">attendance_staging (PHASE 1 BUFFER)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• staging_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• session_id: INT [FK -> class_sessions]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• student_id: INT [FK -> students]</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• verification_method: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#F59E0B">• risk_score: FLOAT</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">UQ: (session_id, student_id) [IDEMPOTENT]</text>
+    </g>
+
+    <!-- attendance_ledger -->
+    <g transform="translate(15, 240)">
+      <rect width="350" height="150" rx="8" fill="#1E293B" stroke="#10B981"/>
+      <rect x="0" y="0" width="350" height="28" rx="8" fill="#047857"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">attendance_ledger (PHASE 2 IMMUTABLE)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• ledger_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• session_id: INT [FK -> class_sessions]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• student_id: INT [FK -> students]</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• verification_method: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• finalized_at: DATETIME</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">UQ: (session_id, student_id) [AUDITED]</text>
+    </g>
+
+    <!-- attendance table -->
+    <g transform="translate(15, 405)">
+      <rect width="350" height="150" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="350" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#34D399">attendance (High-Level Summary)</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• attendance_id: INT [PK, AI]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• student_id, session_id: INT [FK]</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• final_status: ENUM('PRESENT','LATE',...)</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• authorization_status: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#34D399">• faculty_verified: BOOL | zero_trust_auth: BOOL</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• timestamp: DATETIME</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 4: VERIFICATIONS & AUDIT TRAIL -->
+  <g transform="translate(1220, 150)">
+    <rect width="320" height="780" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="320" height="45" rx="16" fill="#B45309"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">4. Audits & Overrides</text>
+
+    <!-- faculty_verifications -->
+    <g transform="translate(15, 65)">
+      <rect width="290" height="150" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="290" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FCD34D">faculty_verifications</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• faculty_verification_id: INT [PK]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#F87171">• student_id, session_id, faculty_id</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• decision: ENUM('APPROVED','REJECTED')</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• is_override: BOOL (True for manual)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• remarks: TEXT | timestamp</text>
+    </g>
+
+    <!-- face_verifications -->
+    <g transform="translate(15, 230)">
+      <rect width="290" height="150" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="290" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FCD34D">face_verifications</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• verification_id: INT [PK]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• similarity_score: FLOAT</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• liveness_status: ENUM</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• verification_result: ENUM</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">• model_version: VARCHAR(20)</text>
+    </g>
+
+    <!-- anomaly_events & audit_logs -->
+    <g transform="translate(15, 395)">
+      <rect width="290" height="175" rx="8" fill="#1E293B" stroke="#475569"/>
+      <rect x="0" y="0" width="290" height="28" rx="8" fill="#334155"/>
+      <text x="12" y="19" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FCD34D">anomaly_events & audit_logs</text>
+      <text x="12" y="46" font-family="Segoe UI, monospace" font-size="10" fill="#FCD34D">• anomaly_id, log_id: INT [PK]</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• anomaly_type: VARCHAR(50)</text>
+      <text x="12" y="82" font-family="Segoe UI, monospace" font-size="10" fill="#F59E0B">• risk_score: FLOAT | severity</text>
+      <text x="12" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• event_type: VARCHAR(50)</text>
+      <text x="12" y="118" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• xai_explanation: TEXT</text>
+      <text x="12" y="136" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• performed_by: VARCHAR(50)</text>
+      <text x="12" y="154" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• ip_address: VARCHAR(45)</text>
+    </g>
+  </g>
+</svg>

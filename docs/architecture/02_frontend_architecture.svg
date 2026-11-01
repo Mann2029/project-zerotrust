@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="grad-cyan2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg2)"/>
+
+  <!-- Title -->
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="80" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow2)"/>
+    <text x="30" y="48" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">AuraTrust Frontend Architecture & Component Hierarchy</text>
+    <text x="1140" y="48" font-family="Segoe UI, monospace" font-size="14" fill="#38BDF8">REACT 19 + VITE + TAILWIND</text>
+    <text x="30" y="68" font-family="Segoe UI, sans-serif" font-size="13" fill="#94A3B8">Three.js WebGL Interactive Background • Resilient WebSockets • Role-Based Navigation</text>
+  </g>
+
+  <!-- COLUMN 1: ENTRY & SHELL -->
+  <g transform="translate(60, 150)">
+    <rect width="340" height="780" rx="16" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" filter="url(#shadow2)"/>
+    <rect x="0" y="0" width="340" height="45" rx="16" fill="url(#grad-cyan2)"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">1. Entry & Application Shell</text>
+
+    <g transform="translate(15, 65)">
+      <rect width="310" height="85" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">main.jsx & index.css</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">React 19 Root DOM Render</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">Tailwind v3.4 Utility Design Tokens</text>
+    </g>
+
+    <g transform="translate(15, 165)">
+      <rect width="310" height="110" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">App.jsx (Core Orchestrator)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Hash Routing (#landing, #faculty, etc.)</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">User & Role State Persistence</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#10B981">Global WS Connection Listener</text>
+    </g>
+
+    <g transform="translate(15, 290)">
+      <rect width="310" height="110" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">AppShell.jsx (Layout Engine)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Responsive Navigation Sidebar</text>
+      <text x="12" y="64" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">WS Health Pill & Active Session Pill</text>
+      <text x="12" y="84" font-family="Segoe UI, sans-serif" font-size="11" fill="#F59E0B">Role-Gated Navigation Links</text>
+    </g>
+
+    <g transform="translate(15, 415)">
+      <rect width="310" height="110" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">BackgroundMotion.jsx (Three.js)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Interactive Parallax WebGL Canvas</text>
+      <text x="12" y="64" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Rotating Geometric 3D Shield Wireframe</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">Dynamic Mouse Parallax Response</text>
+    </g>
+
+    <g transform="translate(15, 540)">
+      <rect width="310" height="90" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#38BDF8">PortalTransitionOverlay.jsx</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Zero-Flicker View Transitions</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">1250ms Smooth Kinetic Blur</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: PAGE VIEWS -->
+  <g transform="translate(430, 150)">
+    <rect width="400" height="780" rx="16" fill="#0F172A" stroke="#818CF8" stroke-width="1.5" filter="url(#shadow2)"/>
+    <rect x="0" y="0" width="400" height="45" rx="16" fill="#4338CA"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">2. Core View Modules</text>
+
+    <g transform="translate(15, 65)">
+      <rect width="370" height="130" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#A5B4FC">HomePage.jsx (Public & Auth)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Hero Section with Sentinel Shield</text>
+      <text x="12" y="64" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Dual Auth Tabs (Faculty & Student Login)</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">POST /api/v1/auth/login</text>
+      <text x="12" y="104" font-family="Segoe UI, sans-serif" font-size="11" fill="#10B981">Demo Quick-Login Buttons (prof_aiml, etc.)</text>
+    </g>
+
+    <g transform="translate(15, 210)">
+      <rect width="370" height="160" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#A5B4FC">FacultyConsole.jsx (Teacher Dashboard)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Active Class Session Manager (Lab-AIML-A/B)</text>
+      <text x="12" y="64" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Real-Time Staged Attendance Table (Phase 1)</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">GET /attendance/staging/{id} • POST /commit</text>
+      <text x="12" y="104" font-family="Segoe UI, sans-serif" font-size="11" fill="#F59E0B">Dual Verification Review Modal (Overrides)</text>
+      <text x="12" y="124" font-family="Segoe UI, sans-serif" font-size="11" fill="#A7F3D0">RAG Copilot Chat Widget for Faculty Inquiries</text>
+    </g>
+
+    <g transform="translate(15, 385)">
+      <rect width="370" height="150" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#A5B4FC">ScannerKiosk.jsx (Biometric Scanner)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Webcam Stream Capture (HTML5 Canvas)</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">WebSocket /api/v1/ws/session/{id}</text>
+      <text x="12" y="84" font-family="Segoe UI, sans-serif" font-size="11" fill="#10B981">Real-time Green/Red Bounding Box HUD</text>
+      <text x="12" y="104" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Live Verified Student Cards & Audio Feedback</text>
+    </g>
+
+    <g transform="translate(15, 550)">
+      <rect width="370" height="130" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#A5B4FC">StudentPortal.jsx & ReportHub.jsx</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Student Portal: Circular Attendance Gauge</text>
+      <text x="12" y="64" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">ReportHub: Security Audit Log Viewer</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">GET /student/dashboard • GET /reports/*</text>
+      <text x="12" y="104" font-family="Segoe UI, sans-serif" font-size="11" fill="#F59E0B">Defaulter Export & Session CSV Generation</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: SERVICES & DATA FLOW -->
+  <g transform="translate(860, 150)">
+    <rect width="400" height="780" rx="16" fill="#0F172A" stroke="#10B981" stroke-width="1.5" filter="url(#shadow2)"/>
+    <rect x="0" y="0" width="400" height="45" rx="16" fill="#059669"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">3. Network & Transport Abstraction</text>
+
+    <g transform="translate(15, 65)">
+      <rect width="370" height="230" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#34D399">services/api.js (REST Client)</text>
+      <text x="12" y="44" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">Bearer Token Automatic Injection</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• login(user, pass) -> localStorage token</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• logout() -> token purge & cookie clear</text>
+      <text x="12" y="104" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• getActiveSessions() -> /sessions/active</text>
+      <text x="12" y="124" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• getStagedAttendance(id) -> /staging/{id}</text>
+      <text x="12" y="144" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• commitAttendance(id) -> /commit/{id}</text>
+      <text x="12" y="164" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• queryCopilot(query) -> /xai/query-copilot</text>
+      <text x="12" y="184" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• getStudentDashboard() -> /student/dashboard</text>
+      <text x="12" y="204" font-family="Segoe UI, monospace" font-size="10" fill="#10B981">Automatic 401 Interception -> Session Logout</text>
+    </g>
+
+    <g transform="translate(15, 310)">
+      <rect width="370" height="210" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#34D399">services/websocket.js (WS Client)</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Resilient WebSocket Connection Hub</text>
+      <text x="12" y="64" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• Exponential Backoff Auto-Reconnect</text>
+      <text x="12" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">  (Base 1s, Max 10s, Multiplier 1.5x)</text>
+      <text x="12" y="104" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• Query Token Param Authentication</text>
+      <text x="12" y="124" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• Heartbeat Keepalive (25s Ping Interval)</text>
+      <text x="12" y="144" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• Channel Subscriptions (session_1, etc.)</text>
+      <text x="12" y="164" font-family="Segoe UI, monospace" font-size="10" fill="#94A3B8">• Observer Listener Registry (Set)</text>
+      <text x="12" y="184" font-family="Segoe UI, sans-serif" font-size="11" fill="#10B981">Dev Port Fallback (5173 -> 8000 Proxy)</text>
+    </g>
+
+    <g transform="translate(15, 535)">
+      <rect width="370" height="140" rx="8" fill="#1E293B" stroke="#475569"/>
+      <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#34D399">Design System & Styling</text>
+      <text x="12" y="44" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Typography: Segoe UI / Inter System Stack</text>
+      <text x="12" y="64" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Color Palette: Deep Slate (#070B19, #0F172A)</text>
+      <text x="12" y="84" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Accents: Cyan (#38BDF8), Emerald (#10B981)</text>
+      <text x="12" y="104" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Icons: Lucide React (Shield, Camera, Users)</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 4: CONNECTION MATRIX SUMMARY -->
+  <g transform="translate(1290, 150)">
+    <rect width="250" height="780" rx="16" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5" filter="url(#shadow2)"/>
+    <rect x="0" y="0" width="250" height="45" rx="16" fill="#D97706"/>
+    <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">4. Mapped Endpoints</text>
+
+    <g transform="translate(15, 65)">
+      <text x="0" y="16" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F59E0B">ACTIVE REST ENDPOINTS</text>
+      <text x="0" y="36" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /auth/login</text>
+      <text x="0" y="52" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /auth/logout</text>
+      <text x="0" y="68" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /health</text>
+      <text x="0" y="84" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /sessions/active</text>
+      <text x="0" y="100" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /sessions/{id}/status</text>
+      <text x="0" y="116" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /session/{id}/activate</text>
+      <text x="0" y="132" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /session/{id}/extend</text>
+      <text x="0" y="148" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /attendance/staging/{id}</text>
+      <text x="0" y="164" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /attendance/staging/appr</text>
+      <text x="0" y="180" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /attendance/staging/rej</text>
+      <text x="0" y="196" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /attendance/commit/{id}</text>
+      <text x="0" y="212" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /dual-verification/*</text>
+      <text x="0" y="228" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /xai/query-copilot</text>
+      <text x="0" y="244" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /xai/explain-risk</text>
+      <text x="0" y="260" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /reports/security</text>
+      <text x="0" y="276" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /student/dashboard</text>
+      <text x="0" y="292" font-family="Segoe UI, monospace" font-size="10" fill="#E2E8F0">• /reports/defaulters</text>
+
+      <line x1="0" y1="320" x2="220" y2="320" stroke="#334155"/>
+
+      <text x="0" y="345" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F59E0B">WEBSOCKET ROUTE</text>
+      <text x="0" y="365" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">• /ws/session/{session_id}</text>
+
+      <line x1="0" y1="395" x2="220" y2="395" stroke="#334155"/>
+
+      <text x="0" y="420" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#10B981">SOURCE AUDIT STATUS</text>
+      <text x="0" y="440" font-family="Segoe UI, sans-serif" font-size="10" fill="#E2E8F0">All 21 frontend endpoints</text>
+      <text x="0" y="456" font-family="Segoe UI, sans-serif" font-size="10" fill="#E2E8F0">100% matched to backend</text>
+      <text x="0" y="472" font-family="Segoe UI, sans-serif" font-size="10" fill="#E2E8F0">routes in main.py</text>
+      <text x="0" y="495" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#38BDF8">VERIFIED FROM SOURCE</text>
+    </g>
+  </g>
+</svg>

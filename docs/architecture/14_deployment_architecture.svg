@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="80" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="30" y="48" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">AuraTrust Deployment & Runtime Environment Topology</text>
+    <text x="30" y="68" font-family="Segoe UI, sans-serif" font-size="13" fill="#38BDF8">Native Windows Hardware Acceleration Profile on NVIDIA GeForce RTX 4050 GPU</text>
+  </g>
+  
+        <g transform="translate(60, 160)">
+          <rect width="1480" height="760" rx="16" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+          <g transform="translate(40, 40)">
+            <rect x="0" y="0" width="440" height="500" rx="12" fill="#1E293B" stroke="#334155"/>
+            <text x="20" y="35" font-family="Segoe UI" font-size="16" font-weight="700" fill="#38BDF8">HARDWARE LAYER</text>
+            <text x="20" y="70" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• Host OS: Windows 11 64-bit Native</text>
+            <text x="20" y="105" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• GPU: NVIDIA GeForce RTX 4050 Laptop</text>
+            <text x="20" y="140" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• Compute Capability: 8.9 (Ada Lovelace)</text>
+            <text x="20" y="175" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• VRAM: 6 GB GDDR6 (Allocated ~3.4 GB)</text>
+            <text x="20" y="210" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• cuDNN Version: 8101 Accelerated</text>
+
+            <rect x="500" y="0" width="440" height="500" rx="12" fill="#1E293B" stroke="#334155"/>
+            <text x="520" y="35" font-family="Segoe UI" font-size="16" font-weight="700" fill="#818CF8">SOFTWARE SERVICES</text>
+            <text x="520" y="70" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• Python 3.9.13 (Mann Virtualenv)</text>
+            <text x="520" y="105" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• TensorFlow 2.10.1 (Native Windows GPU)</text>
+            <text x="520" y="140" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• FastAPI 0.103.2 + Uvicorn :8000</text>
+            <text x="520" y="175" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• MySQL 8.0 Server :3306</text>
+            <text x="520" y="210" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• Vite 8.3 Development Server :5173</text>
+
+            <rect x="1000" y="0" width="440" height="500" rx="12" fill="#1E293B" stroke="#334155"/>
+            <text x="1020" y="35" font-family="Segoe UI" font-size="16" font-weight="700" fill="#10B981">STORAGE HIERARCHY</text>
+            <text x="1020" y="70" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• custom_ir_resnet50_v1.h5 (449.2 MB)</text>
+            <text x="1020" y="105" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• storage/embeddings/ (15x .npy vectors)</text>
+            <text x="1020" y="140" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• storage/registered_faces/ (Crops)</text>
+            <text x="1020" y="175" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• frontend/dist/ (Compiled SPA bundle)</text>
+            <text x="1020" y="210" font-family="Segoe UI" font-size="13" fill="#E2E8F0">• Prometheus /metrics Telemetry Export</text>
+          </g>
+        </g>
+        
+</svg>

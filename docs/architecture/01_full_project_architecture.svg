@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E7490" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#581C87" />
+      <stop offset="100%" stop-color="#9333EA" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064E3B" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Title Banner -->
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="80" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="30" y="48" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">AuraTrust Sentinel — End-to-End System Architecture</text>
+    <text x="1120" y="48" font-family="Segoe UI, monospace" font-size="14" fill="#38BDF8">SOURCE VERIFIED: 100% TRACEABILITY</text>
+    <text x="30" y="68" font-family="Segoe UI, sans-serif" font-size="13" fill="#94A3B8">Biometric Zero-Trust Verification Engine • Real-Time WebSockets • Dual-Phase Staging Ledger</text>
+  </g>
+
+  <!-- TIER 1: FRONTEND (React 19 + Tailwind + Three.js) -->
+  <g transform="translate(60, 150)">
+    <rect width="450" height="780" rx="16" fill="#0F172A" stroke="#38BDF8" stroke-width="2" stroke-dasharray="8 4" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="450" height="50" rx="16" fill="url(#grad-cyan)"/>
+    <text x="20" y="32" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">1. PRESENTATION TIER (React SPA)</text>
+
+    <!-- App.jsx Router -->
+    <g transform="translate(20, 70)">
+      <rect width="410" height="90" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">frontend/src/App.jsx</text>
+      <text x="15" y="48" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Hash Router (#landing, #faculty, #scanner, #student)</text>
+      <text x="15" y="68" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">wsClient.connect() • BackgroundMotion (Three.js 3D)</text>
+    </g>
+
+    <!-- Scanner Kiosk -->
+    <g transform="translate(20, 180)">
+      <rect width="410" height="110" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">components/scanner/ScannerKiosk.jsx</text>
+      <text x="15" y="48" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Continuous 30 FPS Camera Ingestion</text>
+      <text x="15" y="68" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">Base64 JPEG Payload -> /api/v1/ws/session/{id}</text>
+      <text x="15" y="88" font-family="Segoe UI, sans-serif" font-size="11" fill="#10B981">HUD Bounding Box Overlay & Liveness Badges</text>
+    </g>
+
+    <!-- Faculty Console -->
+    <g transform="translate(20, 310)">
+      <rect width="410" height="120" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="28" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">components/faculty/FacultyConsole.jsx</text>
+      <text x="15" y="48" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Live Staging Roster & Attendance Finalizer</text>
+      <text x="15" y="68" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">Polls /attendance/staging/{id} • Resolves Overrides</text>
+      <text x="15" y="88" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">Commits Session -> /attendance/commit/{id}</text>
+      <text x="15" y="106" font-family="Segoe UI, sans-serif" font-size="11" fill="#F59E0B">Interactive Copilot Chatbot (RAG Inquiries)</text>
+    </g>
+
+    <!-- Student Portal & ReportHub -->
+    <g transform="translate(20, 450)">
+      <rect width="410" height="100" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">StudentPortal.jsx & ReportHub.jsx</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Self-Service Attendance Timeline & Security Audits</text>
+      <text x="15" y="66" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">GET /student/dashboard • GET /reports/defaulters</text>
+      <text x="15" y="84" font-family="Segoe UI, sans-serif" font-size="11" fill="#E2E8F0">Defaulter Threshold Gauge (<75% Flagging)</text>
+    </g>
+
+    <!-- Services api.js & websocket.js -->
+    <g transform="translate(20, 570)">
+      <rect width="410" height="100" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#38BDF8">services/api.js & websocket.js</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Resilient Network Abstraction Layer</text>
+      <text x="15" y="66" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">Bearer Token Auth • Exponential Reconnect</text>
+      <text x="15" y="84" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">Heartbeat Ping/Pong (25s Keepalive)</text>
+    </g>
+
+    <!-- Assets Footer -->
+    <g transform="translate(20, 690)">
+      <rect width="410" height="60" rx="8" fill="#1E293B" stroke="#334155"/>
+      <text x="15" y="24" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#94A3B8">FRONTEND ASSETS</text>
+      <text x="15" y="42" font-family="Segoe UI, monospace" font-size="11" fill="#64748B">auratrust_shield_logo.png • SentinelScene 3D Shield</text>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 1: Frontend -> Backend -->
+  <g transform="translate(515, 480)">
+    <line x1="0" y1="0" x2="55" y2="0" stroke="#38BDF8" stroke-width="3" stroke-dasharray="6 3"/>
+    <polygon points="55,-6 67,0 55,6" fill="#38BDF8"/>
+    <text x="3" y="-12" font-family="Segoe UI, monospace" font-size="10" fill="#38BDF8">WS / REST</text>
+  </g>
+
+  <!-- TIER 2: BACKEND & BIOMETRIC ENGINES -->
+  <g transform="translate(580, 150)">
+    <rect width="470" height="780" rx="16" fill="#0F172A" stroke="#818CF8" stroke-width="2" stroke-dasharray="8 4" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="470" height="50" rx="16" fill="url(#grad-blue)"/>
+    <text x="20" y="32" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">2. BACKEND & NEURAL ENGINES (FastAPI)</text>
+
+    <!-- main.py Orchestrator -->
+    <g transform="translate(20, 70)">
+      <rect width="430" height="90" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#818CF8">main.py (Unified Gateway)</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">42 Registered REST Endpoints • Singleton Engine Boots</text>
+      <text x="15" y="66" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">JWT Auth Bearer • Mounts /app/ static build</text>
+    </g>
+
+    <!-- websocket_manager.py -->
+    <g transform="translate(20, 180)">
+      <rect width="430" height="110" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#818CF8">14_websockets_realtime/websocket_manager.py</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Kiosk Pipeline: Base64 Decodes -> OpenCV 112x112</text>
+      <text x="15" y="66" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">In-Memory Session Channel Multiplexing</text>
+      <text x="15" y="86" font-family="Segoe UI, sans-serif" font-size="11" fill="#10B981">Multi-Client Broadcast: 30 FPS Sub-50ms Latency</text>
+    </g>
+
+    <!-- Biometric Core (insight_engine.py & siamese_matcher.py) -->
+    <g transform="translate(20, 310)">
+      <rect width="430" height="140" rx="10" fill="#1E293B" stroke="#6366F1" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#A5B4FC">06_face_embedding & 08_verification_engine</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">MultimodalCustomCNNEngine (custom_ir_resnet50_v1.h5)</text>
+      <text x="15" y="66" font-family="Segoe UI, monospace" font-size="11" fill="#38BDF8">512-D L2-Norm Unit Sphere Vectors (TTA Active)</text>
+      <text x="15" y="86" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">SiameseMatcher: 15 Enrolled Identities in RAM</text>
+      <text x="15" y="106" font-family="Segoe UI, monospace" font-size="11" fill="#10B981">Fast Cosine Inner Product Match: 4.45 ms</text>
+      <text x="15" y="124" font-family="Segoe UI, monospace" font-size="11" fill="#F59E0B">Threshold >= 0.65 Match | Impostor Separation: 0.6578</text>
+    </g>
+
+    <!-- PAD Anti-Spoofing & Risk Engine -->
+    <g transform="translate(20, 470)">
+      <rect width="430" height="130" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#818CF8">07_anti_spoofing & 09_anomaly_risk_engine</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">Dual Anti-Spoof: CNN Sigmoid Head + SolvePnP Pose</text>
+      <text x="15" y="66" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">AnomalyRiskEngine: Pure NumPy Isolation Forest</text>
+      <text x="15" y="86" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">Dynamic Risk: R(t) = w1*PAD + w2*SNN + w3*IsoForest</text>
+      <text x="15" y="106" font-family="Segoe UI, sans-serif" font-size="11" fill="#10B981">R < 30 Auto-Approve | 30-70 Dual Queue | >70 Block</text>
+    </g>
+
+    <!-- XAI & Audit Reporting -->
+    <g transform="translate(20, 620)">
+      <rect width="430" height="130" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#818CF8">10_dual_verification & 12_xai_ollama & 16_audit</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">DualVerificationManager: In-Memory Faculty Review Queue</text>
+      <text x="15" y="66" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">AttendanceChatbotAgent: LLM RAG Natural Language</text>
+      <text x="15" y="86" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">TelemetryLogger: SHA-256 Vector & Event Hashing</text>
+      <text x="15" y="106" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">storage/audit_logs/access_audit.jsonl</text>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 2: Backend -> Database -->
+  <g transform="translate(1055, 480)">
+    <line x1="0" y1="0" x2="55" y2="0" stroke="#10B981" stroke-width="3" stroke-dasharray="6 3"/>
+    <polygon points="55,-6 67,0 55,6" fill="#10B981"/>
+    <text x="3" y="-12" font-family="Segoe UI, monospace" font-size="10" fill="#10B981">SQLAlchemy</text>
+  </g>
+
+  <!-- TIER 3: DATABASE & STORAGE LAYER -->
+  <g transform="translate(1120, 150)">
+    <rect width="420" height="780" rx="16" fill="#0F172A" stroke="#10B981" stroke-width="2" stroke-dasharray="8 4" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="420" height="50" rx="16" fill="url(#grad-emerald)"/>
+    <text x="20" y="32" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">3. PERSISTENCE & STORAGE TIER</text>
+
+    <!-- MySQL Database -->
+    <g transform="translate(20, 70)">
+      <rect width="380" height="230" rx="10" fill="#1E293B" stroke="#059669" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#34D399">MySQL (zero_trust_attendance)</text>
+      <text x="15" y="46" font-family="Segoe UI, sans-serif" font-size="12" fill="#E2E8F0">13 Relational Tables (database_core.py):</text>
+      <text x="15" y="68" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">• users, students, faculty, subjects</text>
+      <text x="15" y="88" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">• student_enrollments (Section A & B)</text>
+      <text x="15" y="108" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">• class_sessions (SCHEDULED -> ACTIVE)</text>
+      <text x="15" y="128" font-family="Segoe UI, monospace" font-size="11" fill="#38BDF8">• attendance_staging (Phase 1 Buffer)</text>
+      <text x="15" y="148" font-family="Segoe UI, monospace" font-size="11" fill="#10B981">• attendance_ledger (Phase 2 Final Record)</text>
+      <text x="15" y="168" font-family="Segoe UI, monospace" font-size="11" fill="#F59E0B">• faculty_verifications (Override Audit)</text>
+      <text x="15" y="188" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">• face_verifications, anomaly_events</text>
+      <text x="15" y="208" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">• audit_logs (XAI Explanation Trails)</text>
+    </g>
+
+    <!-- File System Storage -->
+    <g transform="translate(20, 320)">
+      <rect width="380" height="230" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#34D399">File System Storage Hierarchy</text>
+      <text x="15" y="46" font-family="Segoe UI, monospace" font-size="11" fill="#E2E8F0">storage/embeddings/</text>
+      <text x="15" y="66" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">  14x vector_2026-AIML-*.npy (512-D)</text>
+      <text x="15" y="84" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">  1x faculty_EMP-AIML-01.npy (512-D)</text>
+      <text x="15" y="106" font-family="Segoe UI, monospace" font-size="11" fill="#E2E8F0">storage/registered_faces/</text>
+      <text x="15" y="124" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">  14x student crops (1.jpg - 14.jpg)</text>
+      <text x="15" y="142" font-family="Segoe UI, monospace" font-size="11" fill="#94A3B8">  1x faculty crop</text>
+      <text x="15" y="164" font-family="Segoe UI, monospace" font-size="11" fill="#E2E8F0">Model Checkpoints (Root):</text>
+      <text x="15" y="184" font-family="Segoe UI, monospace" font-size="11" fill="#38BDF8">  custom_ir_resnet50_v1.h5 (449.2 MB)</text>
+      <text x="15" y="202" font-family="Segoe UI, monospace" font-size="11" fill="#38BDF8">  custom_ir_resnet50_best.h5 (449.2 MB)</text>
+    </g>
+
+    <!-- Verification Banner -->
+    <g transform="translate(20, 570)">
+      <rect width="380" height="180" rx="10" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#A7F3D0">ZERO-TRUST SECURITY BOUNDARIES</text>
+      <text x="15" y="48" font-family="Segoe UI, sans-serif" font-size="11" fill="#FFFFFF">• Ephemeral JWT Tokens (Bearer)</text>
+      <text x="15" y="68" font-family="Segoe UI, sans-serif" font-size="11" fill="#FFFFFF">• Dynamic Thresholding: 0.65 Match</text>
+      <text x="15" y="88" font-family="Segoe UI, sans-serif" font-size="11" fill="#FFFFFF">• Strict Dual-Verification for 0.48-0.65</text>
+      <text x="15" y="108" font-family="Segoe UI, sans-serif" font-size="11" fill="#FFFFFF">• 2-Phase Staging: No Direct Ledger Write</text>
+      <text x="15" y="128" font-family="Segoe UI, sans-serif" font-size="11" fill="#FFFFFF">• SHA-256 Fingerprinted Embeddings</text>
+      <text x="15" y="148" font-family="Segoe UI, sans-serif" font-size="11" fill="#FFFFFF">• Brute-Force Rate Limiting (15 / 5m)</text>
+    </g>
+  </g>
+</svg>

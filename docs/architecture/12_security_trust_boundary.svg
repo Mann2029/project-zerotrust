@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="80" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="30" y="48" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">Zero-Trust Security Architecture & Defensive Perimeters</text>
+    <text x="30" y="68" font-family="Segoe UI, sans-serif" font-size="13" fill="#38BDF8">Concentric Trust Boundaries Enforcing Cryptographic Isolation and Brute-Force Rate Limiting</text>
+  </g>
+  
+        <g transform="translate(60, 160)">
+          <rect width="1480" height="760" rx="16" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+          <g transform="translate(40, 40)">
+            <rect x="0" y="0" width="340" height="600" rx="12" fill="#1E293B" stroke="#38BDF8"/>
+            <text x="20" y="35" font-family="Segoe UI" font-size="15" font-weight="700" fill="#38BDF8">PERIMETER 1: CLIENT</text>
+            <text x="20" y="70" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Browser LocalStorage</text>
+            <text x="20" y="100" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• HttpOnly Cookie Dual-Binding</text>
+            <text x="20" y="130" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Automatic 401 Eviction</text>
+            <text x="20" y="160" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Zero Raw Embeddings in JS</text>
+
+            <rect x="370" y="0" width="340" height="600" rx="12" fill="#1E293B" stroke="#2563EB"/>
+            <text x="390" y="35" font-family="Segoe UI" font-size="15" font-weight="700" fill="#38BDF8">PERIMETER 2: API GATEWAY</text>
+            <text x="390" y="70" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• FastAPI RBAC Dependency Guards</text>
+            <text x="390" y="100" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Sliding Window Rate Limiter</text>
+            <text x="390" y="130" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• 15 Failed Logins / 5m Lock</text>
+            <text x="390" y="160" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• CORS Whitelist Configuration</text>
+
+            <rect x="740" y="0" width="340" height="600" rx="12" fill="#1E293B" stroke="#F59E0B"/>
+            <text x="760" y="35" font-family="Segoe UI" font-size="15" font-weight="700" fill="#F59E0B">PERIMETER 3: BIOMETRICS</text>
+            <text x="760" y="70" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Auxiliary PAD Sigmoid Head</text>
+            <text x="760" y="100" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• SolvePnP 3D Head Pose Tracking</text>
+            <text x="760" y="130" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Isolation Forest Anomaly Penalty</text>
+            <text x="760" y="160" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Strict 0.65 ArcFace Threshold</text>
+
+            <rect x="1110" y="0" width="340" height="600" rx="12" fill="#1E293B" stroke="#10B981"/>
+            <text x="1130" y="35" font-family="Segoe UI" font-size="15" font-weight="700" fill="#34D399">PERIMETER 4: PERSISTENCE</text>
+            <text x="1130" y="70" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Two-Phase Staging Buffer Isolation</text>
+            <text x="1130" y="100" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• Section/Subject Guard Enforce</text>
+            <text x="1130" y="130" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• SHA-256 Embedding Hashes</text>
+            <text x="1130" y="160" font-family="Segoe UI" font-size="12" fill="#E2E8F0">• ACID Atomic Rollback on Failure</text>
+          </g>
+        </g>
+        
+</svg>
